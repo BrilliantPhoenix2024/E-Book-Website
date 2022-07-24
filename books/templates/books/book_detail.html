@@ -7,4 +7,6 @@
     <p>{{ book.content }}</p>
     <p>{{ book.author }}</p>
     <h5>{{ book.price }}</h5>
+    <br>
+    <a href="{% url 'book_list' %}">Book lists</a>
 {% endblock %}
