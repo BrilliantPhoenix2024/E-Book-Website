@@ -5,10 +5,10 @@
 {% block page_title %}Add{% endblock %}
 
 {% block content %}
-     <form action="" method="POST">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <input type="submit" value="ADD">
-        </form>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="ADD">
+    </form>
     <a href="{% url 'book_list' %}">Book lists</a>
 {% endblock %}
