@@ -7,6 +7,7 @@
     <p>{{ book.content }}</p>
     <p>{{ book.author }}</p>
     <h5>{{ book.price }}</h5>
+    <a href="{% url 'book_update' book.id %}"><button type="button">EDIT</button></a>
     <br>
     <a href="{% url 'book_list' %}">Book lists</a>
 {% endblock %}
