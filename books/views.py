@@ -16,5 +16,6 @@ class BookDetailView(generic.DetailView):
 
 class BookCreateView(generic.CreateView):
     model = Book
+    fields = ['title', 'author', 'content', 'price']
     template_name = 'books/book_create.html'
 
