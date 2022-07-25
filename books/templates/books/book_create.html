@@ -6,5 +6,7 @@
 
 {% block content %}
     {{ form|crispy }}
+    <button type="submit">ADD</button>
+    <br>
     <a href="{% url 'book_list' %}">Book lists</a>
 {% endblock %}
