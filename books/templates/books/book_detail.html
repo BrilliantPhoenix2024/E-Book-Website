@@ -8,6 +8,8 @@
     <p>{{ book.author }}</p>
     <h5>{{ book.price }}</h5>
     <a href="{% url 'book_update' book.id %}"><button type="button">EDIT</button></a>
+    <a href="{% url 'book_delete' book.id %}"><button type="button">DELETE</button></a>
+    <br>
     <br>
     <a href="{% url 'book_list' %}">Book lists</a>
 {% endblock %}
