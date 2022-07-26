@@ -3,9 +3,9 @@
 {% block page_title %}{{ book.title }} details{% endblock %}
 
 {% block content %}
-    <h1>{{ book.title }}</h1>
-    <p>{{ book.content }}</p>
-    <p>{{ book.author }}</p>
+    <h1>{{ book.title|capfirst }}</h1>
+    <p>{{ book.content|linebreaks }}</p>
+    <p>{{ book.author|capfirst }}</p>
     <h5>{{ book.price }}</h5>
     <a href="{% url 'book_update' book.id %}"><button type="button">EDIT</button></a>
     <a href="{% url 'book_delete' book.id %}"><button type="button">DELETE</button></a>
