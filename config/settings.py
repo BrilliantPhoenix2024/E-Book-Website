@@ -133,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication settings
 AUTH_USER_MODEL = 'accounts.CustomUser'
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'book_list'
 LOGOUT_REDIRECT_URL = 'login'
 
 # crispy forms setting
@@ -144,7 +144,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # static files config
 STATIC_URL = '/static/'
-STATICFILES_DIR = [str(BASE_DIR.joinpath('static'))]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+
+
 
 
 
