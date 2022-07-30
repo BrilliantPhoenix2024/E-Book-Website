@@ -47,15 +47,17 @@
                     <div class="card shadow my-3 p-5 w-sm-75 w-100">
                         <h2 class="mb-5">نظرات:</h2>
                         {% for comment in comments %}
-                            <div class="border-bottom mb-3">
-                                <h5 class="mb-3">{{ comment.user.username }}</h5>
-                                {% if comment.recommend %}
-                                    <p>این کتاب را توصیه میکنم</p>
-                                {% else %}
-                                    <p>این کتاب را توصیه نمیکنم</p>
-                                {% endif %}
-                                <p>{{ comment.text|linebreaks }}</p>
-                            </div>
+                            {% if comment.is_active %}
+                                <div class="border-bottom mb-3">
+                                    <h5 class="mb-3">{{ comment.user.username }}</h5>
+                                    {% if comment.recommend %}
+                                        <p>این کتاب را توصیه میکنم</p>
+                                    {% else %}
+                                        <p>این کتاب را توصیه نمیکنم</p>
+                                    {% endif %}
+                                    <p>{{ comment.text|linebreaks }}</p>
+                                </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>
